@@ -39,12 +39,23 @@ print(f'lukujen tulo on : {lukujen_tulo:.2f}')
 print(f'lukujen keskiarvo on : {lukujen_keskiarvo:.2f}')
 
 #5 keskiajan painot
+#Yksi leiviskä on 20 naulaa.
+#Yksi naula on 32 luotia.
+#Yksi luoti on 13,3 grammaa.
 
 #kysytään arvot
 leiviska = float(input('Anna leivisköjen määrä :'))
 naula = float(input('Anna naulojen määrä :'))
 luoti = float(input('Anna luotien määrä :'))
 
+naulan_maara = (leiviska * 20) + naula
+luodin_maara = (naulan_maara * 32) + luoti
+grammojen_maara = (luodin_maara * 13.3)
+
+kilo_kokonaisosa = grammojen_maara // 1000
+kilo_jakojaannos = grammojen_maara % 1000
+
+print(f'Massa nykymittojen mukaan: {kilo_kokonaisosa:.0f} kilogrammaa ja {kilo_jakojaannos:.2f} grammaa. ')
 #6. pin koodi
 
 pin11 = random.randint(0, 9)
