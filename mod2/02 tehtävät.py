@@ -45,8 +45,15 @@ leiviska = float(input('Anna leivisköjen määrä :'))
 naula = float(input('Anna naulojen määrä :'))
 luoti = float(input('Anna luotien määrä :'))
 
-pin1 = str((random.randint(0, 9) + random.randint(0, 9) + random.randint(0, 9))
-pin2 = str((random.randint(0, 6) + random.randint(0, 6) + random.randint(0, 6) + random.randint(0, 6))
+#6. pin koodi
 
-print('3 numeroinen pin koodi on : ' + str(pin1))
-print('4 numeroinen pin koodi on : ' + str(pin2))
+pin11 = random.randint(0, 9)
+pin12 = random.randint(0, 9)
+pin13 = random.randint(0, 9)
+pin21 = random.randint(0, 6)
+pin22 = random.randint(0, 6)
+pin23 = random.randint(0, 6)
+pin24 = random.randint(0, 6)
+
+print(f'3 numeroinen pin koodi on : {pin11} {pin12} {pin13}')
+print(f'4 numeroinen pin koodi on : {pin21} {pin22} {pin23} {pin24}')
