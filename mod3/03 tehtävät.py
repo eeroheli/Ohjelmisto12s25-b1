@@ -49,7 +49,9 @@ if sukupuoli == 'nainen':
 # Sadalla jaolliset vuodet ovat karkausvuosia vain jos ne ovat jaollisia myös neljälläsadalla.
 
 vuosi = int(input('Anna vuosi: '))
-
-
+if vuosi % 100 == 0 and vuosi % 400 == 0 :
+    print('vuosi on karkausvuosi1')
+elif vuosi % 4 == 0 and vuosi % 100 != 0 :
+    print('vuosi on karkausvuosi2')
 else:
     print('vuotesi ei ole karkausvuosi')
