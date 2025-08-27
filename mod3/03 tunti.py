@@ -1,13 +1,13 @@
 #
 import random
 
-satunnaisluku = random.randint(0,101)
+satunnaisluku = random.randint(0,100)
 
 print(f'arvottu luku: {satunnaisluku}')
 # kolikonheittosimulaattori
-if satunnaisluku <= 50:
+if satunnaisluku < 50:
     print("kruuna!")
-elif satunnaisluku > 50 <= 100:
+elif satunnaisluku > 50:
     print("klaava!")
 else:
     print("kolikko jäi pystyyn!")
