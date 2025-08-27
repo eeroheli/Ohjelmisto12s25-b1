@@ -9,6 +9,6 @@ while app_running:
         app_running = False
     else :
         luku = float(luku)
-        numerot.append(luku)
+        numerot.append(luku) #tuli suoraan ehdotettuna mutta toimii :)
 
-print(f'lukuesi suurin arvo on {max(numerot)} ,ja pienin {min(numerot)}')
+print(f'lukuesi suurin arvo on {max(numerot)} ,ja pienin {min(numerot)}.')
