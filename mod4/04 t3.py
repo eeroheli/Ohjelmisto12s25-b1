@@ -3,5 +3,10 @@
 # Lopuksi ohjelma tulostaa saaduista luvuista pienimmän ja suurimman.
 app_running = True
 while app_running:
-    luku = float(input('anna luku: '))
-    while luku != ''
+    luku = input('anna luku: ')
+    if luku == '':
+        app_running = False
+    else :
+        luku = float(luku)
+
+print(f'lukuesi suurin arvo on {max(luku)} ,ja pienin {min(luku)}.')
