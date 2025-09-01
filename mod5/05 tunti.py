@@ -33,3 +33,51 @@ print(len(ikalista[3]))
 nimet2 = ["Viivi", "Ahmed", "Pekka", "Olga", "Mary", "Anna", "Pasi", "jyri"]
 print(nimet2[3])
 print(nimet2[2:6])
+print(nimet2[-1])
+print(nimet2[2:])
+print(nimet2[1:-1])
+print(nimet2[0:-1:2])
+print('---------------------------------')
+
+#uusi lista = vanha lista[alku:loppu:askel]
+
+uusi_lista = nimet2[2:4]
+print(nimet2)
+print(uusi_lista)
+
+#lista jossa 5 kaupunkia tulosta niistä kolme ensimmäistä ja viimeinen
+kaupungit = ['helsinki', 'espoo', 'kirkkonummi', 'vantaa', 'lapua']
+print(f'{kaupungit[0:3]} ja {kaupungit[4]}')
+print(kaupungit[3])
+print('---------------------------------------------')
+
+kaupungit.append('Uusi kaupinki')
+print(kaupungit)
+if 'lapua' in kaupungit:
+    print('lapua löytyi ja poistetaan se')
+    #poistetaan kaupunki
+    kaupungit.remove('lapua')
+    print(kaupungit)
+kaupungit.insert(0, 'lapua')
+print(kaupungit)
+
+#tutkitaan monesko indeksi
+monesko = kaupungit.index('lapua')
+print(monesko)
+
+lisaa_kaupunkeja = ['Tampere', 'Kotka']
+kaupungit.extend(lisaa_kaupunkeja)
+print(kaupungit)
+
+#muokataan olemassa olevaa alkiota
+kaupungit[7] = 'Sipoo'
+print(kaupungit)
+
+hedelmat = ['appelsiini', 'greippi', 'Banaani']
+numerolista = [69, 120, 12]
+hedelmat.sort()
+print(hedelmat)
+numerolista.sort(reverse=True)
+print(numerolista)
+
+viikonpaivat =
