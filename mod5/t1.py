@@ -2,10 +2,10 @@
 # Ohjelma heittää kerran kaikkia arpakuutioita ja tulostaa silmälukujen summan. Käytä for-toistorakennetta.
 import random
 
-heitot = int(input('Montako noppaa haluat heittää'))
-n = 0
+heitot = int(input('Montako noppaa haluat heittää: '))
 silmaluvut = []
-while heitot > n:
-    n = +1
+for i in range(heitot):
     tulos = random.randint(1,6)
     silmaluvut.append(tulos)
+print(silmaluvut)
+print(sum(silmaluvut))
