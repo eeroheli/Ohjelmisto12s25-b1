@@ -3,10 +3,10 @@
 # Vihje: listan alkioiden lajittelujärjestyksen voi kääntää antamalla sort-metodille argumentiksi reverse=True.
 numero = input('Anna luku, Enter lopettaa: ')
 luvut = []
-luvut.append(numero)
 while numero != '' :
-    numero = input('Anna luku, Enter lopettaa: ')
+    numero = int(numero)
     luvut.append(numero)
+    numero = input('Anna luku, Enter lopettaa: ')
 luvut.sort(reverse=True)
 for n in range(5):
     print(luvut[n])
