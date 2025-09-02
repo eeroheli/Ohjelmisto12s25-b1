@@ -3,12 +3,15 @@
 #Esimerkiksi luku 13 on alkuluku, koska se voidaan jakaa vain luvuilla 1 ja 13 siten, että jako menee tasan.
 #Toisaalta esimerkiksi luku 21 ei ole alkuluku, koska se voidaan jakaa tasan myös luvulla 3 tai luvulla 7.
 
-luku = float(input("Annna kokonaisluku: "))
-itsellaan = luku % luku
-yhedella = luku % 1
-kahdella = luku % 2
-kolmella = luku % 3
-if yhedella == 0 and itsellaan == 0 and kahdella != 0 and kolmella != 0:
-    print(f'luku {luku:.0f} on alkuluku')
+luku = int(input("Annna kokonaisluku: "))
+kokonaisluku = True
+if luku < 2: #alle 2 luvut eivät ole alkulukuja
+    kokonaisluku = False
+for i in range(2, luku):
+    if luku % i == 0:
+        kokonaisluku = False
+
+if kokonaisluku:
+    print(f'luku {luku} on alkuluku')
 else :
-    print(f'luku {luku:.0f} ei ole alkuluku')
+    print(f'luku {luku} ei ole alkuluku')
