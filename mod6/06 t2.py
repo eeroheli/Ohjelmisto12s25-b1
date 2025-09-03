@@ -5,11 +5,12 @@
 import random
 
 tahkot = int(input('tahkojen määrä: '))
-def heita():
-    luku = random.randint(1, tahkot)
+
+def heita(tahkot1):
+    luku = random.randint(1, tahkot1)
     return luku
 
 heitto = 0
 while heitto < tahkot:
-    heitto = heita()
+    heitto = heita(tahkot)
     print(f'heitto oli: {heitto}')
