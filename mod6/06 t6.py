@@ -19,3 +19,5 @@ if pizzalaskuri(pizza1, hinta1) > pizzalaskuri(pizza2, hinta2):
 
 elif pizzalaskuri(pizza1, hinta1) < pizzalaskuri(pizza2, hinta2):
     print('ensimmäinen pizza on halvempi')
+else :
+    print('pizzat ovat samanhintaisia')
