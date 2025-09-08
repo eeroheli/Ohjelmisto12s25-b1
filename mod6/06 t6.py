@@ -14,9 +14,9 @@ def pizzalaskuri(pizza, hinta):
     pizzam = pizzacm / 10000
     yhinta = (hinta/pizzam)
     return yhinta
+
 if pizzalaskuri(pizza1, hinta1) > pizzalaskuri(pizza2, hinta2):
     print('toinen pizza on halvempi')
-
 elif pizzalaskuri(pizza1, hinta1) < pizzalaskuri(pizza2, hinta2):
     print('ensimmäinen pizza on halvempi')
 else :
