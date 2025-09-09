@@ -5,3 +5,19 @@
 # Jos käyttäjä haluaa lopettaa, ohjelman suoritus päättyy. Käyttäjä saa valita uuden toiminnon miten monta kertaa tahansa aina siihen asti,
 # kunnes hän haluaa lopettaa. (ICAO-koodi on lentoaseman yksilöivä tunniste. Esimerkiksi Helsinki-Vantaan lentoaseman ICAO-koodi on EFHK.
 # Löydät koodeja helposti selaimen avulla.)
+run = True
+lentokentta = {}
+while run:
+    komento = input('Halutako syöttää uuden lentoaseman(uusi), etsi jo syötetty asema(etsi) vai lopettaa(lopeta): ')
+    if komento == 'lopeta' :
+        run = False
+    elif komento == 'uusi':
+        koodi = input('anna lentokentän ICA0-koodi: ')
+        nimi = input('anna lentokentän nimi: ')
+        lentokentta.update({koodi : nimi})
+    elif komento == 'etsi':
+        haku = (input('anna ICA0 koodi niin etsin vastaavan lentokentän: '))
+        if haku in lentokentta:
+            print(f'lentokenttäsi nimi on :{lentokentta[haku]}')
+    else:
+        print('syötit väärän komennon')
