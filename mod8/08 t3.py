@@ -18,15 +18,15 @@ from geopy.distance import geodesic
 haku1 = (input('anna ensimmäinen ICA0 koodi niin etsin kahden lentokentän etäisyyden: '))
 haku2 = (input('anna toinen ICA0 koodi niin etsin kahden lentokentän etäisyyden: '))
 def etaisyyslaskuri(eka, toka):
-    kentta1 = (f'SELECT gps_code FROM airport WHERE ident like "{eka}"')
+    kentta1 = (f'SELECT latitude_deg, longitude_deg FROM airport WHERE ident like "{eka}"')
     cursor1 = connection.cursor()
     cursor1.execute(kentta1)
     result1 = cursor1.fetchone()
-    kentta2 = (f'SELECT gps_code FROM airport WHERE ident like "{toka}"')
+    kentta2 = (f'SELECT latitude_deg, longitude_deg FROM airport WHERE ident like "{toka}"')
     cursor2 = connection.cursor()
     cursor2.execute(kentta2)
     result2 = cursor2.fetchone()
-    tulos = geodesic(result1[0], result2[0]).km
+    tulos = geodesic(result1, result2).km
     return tulos
 
-print(etaisyyslaskuri(haku1, haku2))
+print(f'lentokenttien etäisyys toisitaan on: {etaisyyslaskuri(haku1, haku2):.2f} km ')
