@@ -26,17 +26,20 @@ class Auto:
     def kulje(self, aika):
         self.kuljettumatka = aika * self.nopeusnyt
 #luodaan lista
-auto = []
+autot = []
 for i in range(1, 11):
-    auto.append(Auto(f"ABC-{i}", random.randint(100, 200)))
+    autot.append(Auto(f"ABC-{i}", random.randint(100, 200)))
 
 game_running = True
 while game_running:
-    t = 0
-    for i in range(len(auto)):
-        auto(t).kiihdyta(random.randint(-10, 15))
-        auto(t).kulje(1)
-        t = t + 1
-    for i in auto:
-        if auto[t].kuljettumatka >= 10000:
+    for auto in autot:
+        auto.kiihdyta(random.randint(-10, 15))
+        auto.kulje(1)
+
+    for auto in autot:
+        if auto.kuljettumatka >= 10000:
+            print(f"{auto.rekisteritunnus} voitti kisan")
             game_running = False
+
+for auto in autot:
+    print(f"auton tunnus {auto.rekisteritunnus} , huippunopeus {auto.huippunopeus}, ja kuljettu matka {auto.kuljettumatka}")
