@@ -2,3 +2,12 @@
 # Kirjoita luokkaan alustaja, joka asettaa ominaisuuksista kaksi ensin mainittua parametreina saatuihin arvoihin.
 # Uuden auton nopeus ja kuljetut matka on asetettava automaattisesti nollaksi. Kirjoita pääohjelma,
 # jossa luot uuden auton (rekisteritunnus ABC-123, huippunopeus 142 km/h). Tulosta pääohjelmassa sen jälkeen luodun auton kaikki ominaisuudet.
+class Auto:
+    def __init__(self, rekisteritunnus, huippunopeus):
+        self.rekisteritunnus = rekisteritunnus
+        self.huippunopeus = huippunopeus
+        self.nopeusnyt = 0
+        self.kuljettumatka = 0
+
+auto = Auto("ABC-123", 142)
+print(f"{auto.rekisteritunnus} , {auto.huippunopeus}, {auto.nopeusnyt}, {auto.kuljettumatka}")
