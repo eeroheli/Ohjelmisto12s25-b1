@@ -24,7 +24,7 @@ class Auto:
             self.nopeusnyt = 0
 
     def kulje(self, aika):
-        self.kuljettumatka = aika * self.nopeusnyt
+        self.kuljettumatka += aika * self.nopeusnyt
 #luodaan lista
 autot = []
 for i in range(1, 11):
