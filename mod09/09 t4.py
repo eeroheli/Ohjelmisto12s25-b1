@@ -42,4 +42,4 @@ while game_running:
             game_running = False
 
 for auto in autot:
-    print(f"auton tunnus {auto.rekisteritunnus} , huippunopeus {auto.huippunopeus}, ja kuljettu matka {auto.kuljettumatka}")
+    print(f"auton tunnus {auto.rekisteritunnus} , huippunopeus {auto.huippunopeus}, ja kuljettu matka {auto.kuljettumatka}km")
