@@ -1,0 +1,47 @@
+class Koira:
+    def __init__(self, nimi, syntymävuosi, haukahdus="Vuh-vuh"):
+        self.nimi = nimi
+        self.syntymävuosi = syntymävuosi
+        self.haukahdus = haukahdus
+
+    def hauku(self, kerrat):
+        for i in range(kerrat):
+            print(self.nimi + " haukkuu: " + self.haukahdus)
+        return
+
+class Hoitola:
+    def __init__(self, nimi):
+        self.nimi = nimi
+        self.koirat = []
+
+    #metodi jonka parametrinä annetaan viittaus Koira olioon
+
+    def koira_sisaan(self, koira):
+        self.koirat.append(koira)
+        print(f'{koira.nimi} lisättiin sisään hoitolaan {self.nimi}')
+        return
+
+    def koira_ulos(self, koira):
+        self.koirat.remove(koira)
+        print(f'{koira.nimi} lähti hoitolasta {self.nimi}')
+        return
+#luodaan hoitolat
+hoitola1 = Hoitola('onnentassu')
+hoitola2 = Hoitola('pikkukoirat')
+#luodaan koirat
+koira1 = Koira("jaska",2010, "ajajajaj")
+koira2 = Koira("jyri", 2012, "shadapa")
+koira3 = Koira("jarkko", 2018, "jaaahaaa")
+koira4 = Koira("jarmo", 2020, "WUFWUF")
+koira1.hauku(1)
+koira2.hauku(1)
+koira3.hauku(1)
+koira4.hauku(1)
+
+#laitetaan koirat hoitolaan
+hoitola1.koira_sisaan(koira1)
+hoitola1.koira_sisaan(koira2)
+hoitola2.koira_sisaan(koira3)
+hoitola2.koira_sisaan(koira4)
+
+hoitola1.koira_ulos(koira1)
