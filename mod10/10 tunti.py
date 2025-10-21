@@ -35,6 +35,25 @@ class Hoitola:
         print('tervehditään koiria ja jokainen haukkuu')
         for koira in self.koirat:
             koira.hauku(kerrat)
+
+class Yritys:
+    def __init__(self, nimi, osote):
+        self.nimi = nimi
+        self.osote = osote
+        self.omistus = []
+    def omistaa(self, hoitola):
+        self.omistus.append(hoitola)
+    def tulostahoitolat(self):
+        for hoitola in self.omistus:
+            print(hoitola.nimi)
+
+    def anna_joululahja(self):
+        print('Yritys antaa joululahjan jokaiselle koiralle')
+        for hoitola in self.omistus:
+            print(f'annetaan lahjoja {hoitola.nimi} koirille')
+            for koira in hoitola.koirat:
+                print(f'{koira.nimi} saa lahjaksi luun')
+                koira.hauku(1)
 #luodaan hoitolat
 hoitola1 = Hoitola('onnentassu')
 hoitola2 = Hoitola('pikkukoirat')
@@ -56,3 +75,11 @@ hoitola2.koira_sisaan(koira4)
 
 hoitola1.printtaakoirat()
 hoitola1.tervehdikoiria(1)
+
+hoitola1.koira_ulos(koira1)
+yritys1 = Yritys("musti","yea1" )
+yritys1.omistaa(hoitola1)
+yritys1.omistaa(hoitola2)
+yritys1.tulostahoitolat()
+
+yritys1.anna_joululahja()
