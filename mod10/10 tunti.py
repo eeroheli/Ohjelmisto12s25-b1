@@ -25,6 +25,16 @@ class Hoitola:
         self.koirat.remove(koira)
         print(f'{koira.nimi} lähti hoitolasta {self.nimi}')
         return
+
+    def printtaakoirat(self):
+        print(f'{self.nimi} on seuraavat koirat')
+        for koira in self.koirat:
+            print(koira.nimi)
+
+    def tervehdikoiria(self, kerrat):
+        print('tervehditään koiria ja jokainen haukkuu')
+        for koira in self.koirat:
+            koira.hauku(kerrat)
 #luodaan hoitolat
 hoitola1 = Hoitola('onnentassu')
 hoitola2 = Hoitola('pikkukoirat')
@@ -44,4 +54,5 @@ hoitola1.koira_sisaan(koira2)
 hoitola2.koira_sisaan(koira3)
 hoitola2.koira_sisaan(koira4)
 
-hoitola1.koira_ulos(koira1)
+hoitola1.printtaakoirat()
+hoitola1.tervehdikoiria(1)
