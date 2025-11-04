@@ -36,6 +36,6 @@ for (let fruit of fruits) {
 }
 //läpikäynti for in rakenteella saadaan arvot ja index
 //harvemmin käytetään taulukoiden kanssa enemmän objektien
-for (let fruitsKey in fruits) {
-    console.log(fruitsKey)
+for (let index in fruits) {
+    console.log(index + fruits[index])
 }
