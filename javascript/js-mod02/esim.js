@@ -39,3 +39,26 @@ for (let fruit of fruits) {
 for (let index in fruits) {
     console.log(index + fruits[index])
 }
+/**
+ sort() sorts the array alphabetically
+reverse() reverses the items in the array in reverse order
+shift() deletes and returns the 1st item in the array
+pop() deletes and returns the last item in the array
+push(value) adds the value at the end of the array, multiple values separated by commas
+includes(value) checks whether the array contains the given value
+ */
+
+fruits.sort()
+console.log(fruits)
+fruits.reverse()
+console.log(fruits)
+
+let ages = [2300, 234, 33, 19]
+ages.sort()
+console.log(ages)
+ages.sort((a, b) => a - b)
+console.log(ages)
+ages.sort((a, b) => b - a)
+console.log(ages)
+
+
