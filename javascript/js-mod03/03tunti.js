@@ -82,3 +82,14 @@ document.addEventListener('mousemove', function (event){
     console.log('hiiri liikkuu', event)
     outputElement[0].textContent = `hiiren sijainti: ${event.screenX},${event.screenY}`
 })
+
+const addfrom = document.querySelector('form')
+const inputtext = addfrom.querySelector('input')
+addfrom.addEventListener('submit',function (event){
+    event.preventDefault()
+    const lielem = document.createElement('li')
+    lielem.textContent = inputtext.value
+    inventory.push()
+    inventoryOlElem.appendChild(lielem)
+    inputtext.value = ''
+})
