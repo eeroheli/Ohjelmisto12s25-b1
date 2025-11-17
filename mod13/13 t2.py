@@ -3,6 +3,7 @@
 # http://127.0.0.1:3000/kenttä/EFHK. Vastauksen on oltava muodossa: {"ICAO":"EFHK", "Name":"Helsinki Vantaa Airport", "Municipality":"Helsinki"}.
 
 from flask import Flask
+from flask_cors import CORS
 import mysql.connector
 connection = mysql.connector.connect(
     port=3306,
@@ -15,7 +16,7 @@ connection = mysql.connector.connect(
 
 
 app = Flask(__name__)
-
+CORS(app)
 @app.route('/kenttä/<icao>')
 def kenttä(icao):
     cursor1 = connection.cursor()
