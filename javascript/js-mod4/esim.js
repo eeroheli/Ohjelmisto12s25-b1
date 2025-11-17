@@ -26,4 +26,22 @@
     synchronousFunction();
     asynchronousFunction();
 
+
+    //oldschool promisen käsittely toimii mutta ei suositella
+    fetch('pics.json').then(function (data){
+        console.log('response data: ', data)
+        data.json().then(function (data){
+            console.log('json data: ', data)
+        })
+    })
+    //suositeltu moderni tapa
+    async function fetchpics() {
+        try {
+            const data = await fetch('pics.json')
+            const pics = await data.json()
+            console.log(('pics', pics))
+        } catch (error){
+            console.error(error)
+        }
+    }
     console.log('the script ends');
